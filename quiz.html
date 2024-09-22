@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Raleway+Dots&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <div class="container" id="welcome">
+    <h1>Welcome to the Quiz Game!</h1>
+
+    <!-- Category Selection -->
+    <h3>Select Categories:</h3>
+    <div class="category-options">
+        <label><input type="checkbox" name="category" value="Film & TV"> Film & TV</label>
+        <label><input type="checkbox" name="category" value="Music"> Music</label>
+        <label><input type="checkbox" name="category" value="History"> History</label>
+        <label><input type="checkbox" name="category" value="Science"> Science</label>
+        <label><input type="checkbox" name="category" value="Technology"> Technology</label>
+        <label><input type="checkbox" name="category" value="Geography"> Geography</label>
+        <label><input type="checkbox" name="category" value="Sports"> Sports</label>
+        <label><input type="checkbox" name="category" value="Art & Literature"> Art & Literature</label>
+        <label><input type="checkbox" name="category" value="General Knowledge"> General Knowledge</label>
+        <label><input type="checkbox" name="category" value="Food & Drink"> Food & Drink</label>
+        <label><input type="checkbox" name="category" value="Animals"> Animals</label>
+        <label><input type="checkbox" name="category" value="Politics"> Politics</label>
+    </div>
+
+    <h3>Select Difficulty:</h3>
+    <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+
+    <div>
+      <button id="startBtn">Start Quiz</button>
+    </div>
+  </div>
+
+  <div class="container hidden" id="quiz">
+    <h2 id="question"></h2>
+    <div class="options">
+      <button class="option-btn">Option 1</button>
+      <button class="option-btn">Option 2</button>
+      <button class="option-btn">Option 3</button>
+      <button class="option-btn">Option 4</button>
+    </div>
+    <p id="feedback" class="hidden">Your answer is <span id="answer-result"></span>!</p>
+  </div>
+
+  <div class="container hidden" id="result">
+    <h2 id="fs">Your Final Score:</h2>
+    <p id="final-score"></p>
+    <button id="play-again">Play Again</button>
+  </div>
+
+  <div id="confetti"></div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
